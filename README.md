@@ -359,17 +359,23 @@ Setting buildpack to heroku/nodejs... done
 https://psti-tasks.herokuapp.com/ | https://git.heroku.com/psti-tasks.git
 ``` 
 
+### Variables de entorno en Heroku
+En la configuración de nuestra aplicación en el sitio web de Heroku, debemos asignar cada una de las variables de entorno en el archivo *.env* con su respectivo valor. Aparte de estos, necesitamos una variable de entorno adicional que va a permitir identificar si estamos en Heroku, esta es *ON_HEROKU* y su valor lo podemos poner en 1.
+
+### Desplegando en Heroku
+
 Vincular repositorio local con repositorio en Heroku
 ```sh
 heroku git:remote -a psti-tasks
 ```
 
-Agregamos todos los archivos que vamos a incluir en nuestro siguiente commit
+Agregamos todos los archivos que vamos a incluir en nuestro siguiente commit. Luego hacemos el commit de nuestra primera version y posteriormente hacemos push a Heroku.
 
 ```sh
 git add .
+git commit -m "primera version"
+git push heroku master
 ```
-
 
 ## Referencias
 https://www.geeksforgeeks.org/nodejs-crud-operations-using-mongoose-and-mongodb-atlas/

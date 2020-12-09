@@ -1,4 +1,4 @@
-# TODO Tasks
+# PSTI Tasks
 Aplicación para crear tareas desplegada en Heroku usando NodeJS, Express, MongoDB y Vue
 
 ## Verificando requerimientos
